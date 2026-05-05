@@ -12,6 +12,36 @@ function Game() {
             setShowAnswer(false);
         });
     };
+
+    useEffect(() => {
+        getJoke();
+    }, []);
+
+    return (
+        <div>
+            <h1>Joke Generator</h1>
+
+            {joke && (
+                <>
+                <p><strong>Question:</strong> {joke.setup}</p>
+
+                {showAnswer && (
+                    <p><strong>Answer:</strong> {joke.punchline}</p>
+                )}
+                </>
+            )}
+
+            <button onClick={() => setShowAnswer(true)}>
+                Show Answer
+            </button>
+
+            <br /><br />
+
+            <button onClick={getJoke}>
+                Next Joke
+            </button>
+        </div>
+    );
 }
 
 export default Game;
