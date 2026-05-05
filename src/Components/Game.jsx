@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./Game.css";
 
 function Game() {
     const [joke, setJoke] = useState(null);
@@ -18,7 +19,7 @@ function Game() {
     }, []);
 
     return (
-        <div>
+        <div className="container">
             <h1>Joke Generator</h1>
 
             {joke && (
