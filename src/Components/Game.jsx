@@ -5,13 +5,11 @@ function Game() {
     const [joke, setJoke] = useState(null);
     const [showAnswer, setShowAnswer] = useState(false)
 
-    const getJoke = () => {
-        fetch("https://official-joke-api.appspot.com/random_joke")
-        .then(res => res.json())
-        .then(data => {
+    const getJoke = async () => {
+        const res = await fetch("https://official-joke-api.appspot.com/random_joke")
+        const data = await res.json();
             setJoke(data);
             setShowAnswer(false);
-        });
     };
 
     useEffect(() => {
