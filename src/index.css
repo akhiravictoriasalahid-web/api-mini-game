@@ -52,6 +52,7 @@
 
 body {
   margin: 0;
+  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
 }
 
 #root {
