@@ -24,6 +24,9 @@ function Register() {
     return (
         <div className="card">
             <h2>Create Account</h2>
+            <p>
+                Create your account to start playing. 
+            </p>
 
             <div className="form">
 
@@ -51,6 +54,13 @@ function Register() {
                 <button onClick={handleRegister}>
                     Register
                 </button>
+
+                <p className="signup-text">
+                    Already have an account? {""}
+                    <span onClick={() => navigate("/")}>
+                        Login
+                    </span>
+                </p>
             </div>
         </div>
     );
