@@ -12,6 +12,16 @@ function Register() {
 
     const handleRegister = () => {
 
+        if (!username || !password || !email) {
+            alert("Please fill in all Fields");
+            return;
+        }
+
+        if (password.length < 8) {
+            alert("Password must be at least 8 characters");
+            return;
+        }
+
         localStorage.setItem("username", username);
         localStorage.setItem("password", password);
         localStorage.setItem("email", email);
@@ -31,7 +41,7 @@ function Register() {
             <div className="form">
 
                 <input 
-                type="username" 
+                type="text" 
                 placeholder="Username..."
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
