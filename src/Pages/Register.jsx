@@ -53,6 +53,10 @@ function Register() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 />
+                
+                <p className="password-note">
+                    Password must be at least 8 characters.
+                </p>
 
                 <input 
                 type="email" 

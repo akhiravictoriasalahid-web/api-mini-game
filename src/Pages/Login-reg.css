@@ -27,6 +27,12 @@
     
 }
 
+.password-note {
+    margin-top: -12px;
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+
 .signup-text span {
     color: #5c7cfa;
     font-weight: 600;
